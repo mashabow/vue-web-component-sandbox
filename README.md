@@ -1,4 +1,4 @@
-# vue-web-component-wrapper
+# vuex-web-component-sandbox
 
 ## Project setup
 ```
