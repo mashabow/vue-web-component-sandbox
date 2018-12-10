@@ -1,10 +1,8 @@
 import Vue from 'vue';
-import App from './App.vue';
-import store from './store';
+// import store from './store';
+// @ts-ignore
+import wrap from '@vue/web-component-wrapper';
+import MyA from './components/MyA.vue';
 
-Vue.config.productionTip = false;
-
-new Vue({
-  store,
-  render: (h) => h(App),
-}).$mount('#app');
+const CustomElementMyA = wrap(Vue, MyA);
+window.customElements.define('my-a', CustomElementMyA);
