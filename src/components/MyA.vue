@@ -1,9 +1,15 @@
 <template>
-  <div>A: {{msg}}</div>
+  <div>{{label}}: {{count}}
+    <button @click="increment">+</button>
+  </div>
 </template>
 
 <script lang="ts">
+import { mapMutations, mapState } from 'vuex';
+
 export default {
-  props: ['msg'],
+  props: ['label'],
+  computed: mapState(['count']),
+  methods: mapMutations(['increment']),
 };
 </script>
