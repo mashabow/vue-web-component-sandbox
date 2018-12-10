@@ -1,6 +1,6 @@
 <template>
-  <div>[A] {{label}}: {{count}}
-    <button @click="increment">+</button>
+  <div>[B] {{label}}: {{count}}
+    <button @click="decrement">-</button>
   </div>
 </template>
 
@@ -12,6 +12,6 @@ export default {
   store,
   props: ['label'],
   computed: mapState(['count']),
-  methods: mapMutations(['increment']),
+  methods: mapMutations(['decrement']),
 };
 </script>
